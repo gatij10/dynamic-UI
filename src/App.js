@@ -1,12 +1,11 @@
-import { BrowserView, MobileView } from 'react-device-detect';
 import './App.css';
+import PageLayout from './layouts/PageLayout';
 
 function App() {
   return (
-    <>
-      <MobileView>This is mobile view</MobileView>
-      <BrowserView>This is desktop view</BrowserView>
-    </>
+    <div className="container">
+      <PageLayout />
+    </div>
   );
 }
 

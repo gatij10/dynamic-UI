@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const HomepageConatiner = styled.div`
-    margin: 3%;
+    margin: 4%;
 `;

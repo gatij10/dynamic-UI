@@ -4,15 +4,14 @@ import renderCard from '../../utils/renderCard';
 
 const CardGroups = ({
     cards,
-    // key,
     cardType,
-    // isScrollable,
-    // height,
+    isScrollable,
+    height,
 }) => (
     <div>
         {
             cards.map((cardData) => (
-                renderCard(cardType, cardData)
+                renderCard(cardType, height, isScrollable, cardData)
             ))
         }
     </div>
@@ -21,6 +20,13 @@ const CardGroups = ({
 CardGroups.propTypes = {
     cards: PropTypes.array.isRequired,
     cardType: PropTypes.string.isRequired,
+    height: PropTypes.number,
+    isScrollable: PropTypes.bool,
+};
+
+CardGroups.defaultProps = {
+    height: 0,
+    isScrollable: false,
 };
 
 export default CardGroups;

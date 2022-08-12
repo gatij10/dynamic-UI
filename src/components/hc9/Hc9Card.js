@@ -7,7 +7,7 @@ const Hc9Card = ({ cardData = {}, height = 0 }) => (
         <img
             src={cardData.bg_image.image_url}
             alt="placeholder"
-            className="bg-image"
+            className="background-image"
         />
     </Hc9CardContainer>
 );

@@ -5,7 +5,7 @@ export const Hc9CardContainer = styled.div`
   width: fit-content;
   border-radius: 11px;
   vertical-align:middle;
-  .bg-image {
+  .background-image {
     object-fit: contain;
     height: ${({ height }) => (height ? `${height}px` : '195px')};
   }

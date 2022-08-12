@@ -13,7 +13,7 @@ const Hc6Card = ({ cardData = {} }) => (
                 src={cardData?.icon?.image_url || profilePlaceHolder}
                 alt="profile_img"
             />
-            <Text>{cardData?.formatted_title.text}</Text>
+            <Text>{cardData?.formatted_title?.text}</Text>
         </ContentContainer>
         <RightArrow src={rightArrow} alt="right_arrow" />
     </Hc6CardContainer>

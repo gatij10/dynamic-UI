@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import renderCard from '../../utils/renderCard';
+import { CardGroupContainer } from './CardGroups.styles';
 
 const CardGroups = ({
     cards,
@@ -8,13 +9,13 @@ const CardGroups = ({
     isScrollable,
     height,
 }) => (
-    <div>
+    <CardGroupContainer isScrollable={isScrollable}>
         {
             cards.map((cardData) => (
-                renderCard(cardType, height, isScrollable, cardData)
+                renderCard(cardType, height, cardData)
             ))
         }
-    </div>
+    </CardGroupContainer>
 );
 
 CardGroups.propTypes = {

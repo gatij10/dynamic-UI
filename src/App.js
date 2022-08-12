@@ -1,10 +1,10 @@
 import './App.css';
-import PageLayout from './layouts/PageLayout';
+import HomePageLayout from './layouts/HomePageLayout';
 
 function App() {
   return (
     <div className="container">
-      <PageLayout />
+      <HomePageLayout />
     </div>
   );
 }

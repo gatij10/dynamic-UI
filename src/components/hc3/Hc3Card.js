@@ -10,23 +10,28 @@ const Hc3Card = ({ cardData = {} }) => (
             backgroundColor={cardData?.bg_color}
             backgroundImage={cardData?.bg_image?.image_url}
         >
-            <h1 className="heading">{cardData.title}</h1>
-            <h4 className="sub-heading">
-                {cardData.description}
-            </h4>
+            <div className="content-container">
+                <div className="text-container">
+                    <h1 className="heading">{cardData.title}</h1>
+                </div>
+                <div className="text-container">
+                    <h4 className="sub-heading">
+                        {cardData.description}
+                    </h4>
+                </div>
+                {
+                    cardData?.cta && (
+                        <button
+                            type="button"
+                            className="cta"
+                            onClick={() => window.open(cardData?.cta[0]?.url)}
+                        >
+                            {cardData?.cta[0]?.text}
 
-            {
-                cardData?.cta && (
-                    <button
-                        type="button"
-                        className="cta"
-                        onClick={() => window.open(cardData?.cta[0]?.url)}
-                    >
-                        {cardData?.cta[0]?.text}
-
-                    </button>
-                )
-            }
+                        </button>
+                    )
+                }
+            </div>
         </Hc3CardContentContainer>
     </Hc3CardContainer>
 );

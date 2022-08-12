@@ -10,9 +10,9 @@ export const Hc3CardContainer = styled.div`
 `;
 
 export const Hc3CardContentContainer = styled.div`
-    height: 200px;
-    padding: 30px;
-    min-width: 100%;
+    display: flex;
+    height: 350px;
+    width: 100%;
     flex-direction: column;
     color: #fff;
     background-color: ${({ backgroundColor }) => (backgroundColor || '#454AA6')};
@@ -21,9 +21,17 @@ export const Hc3CardContentContainer = styled.div`
     background-repeat: no-repeat;
     border-radius: 12px;
     justify-content: flex-end;
-    padding-top: 150px;
 
-    .heading: {
+    .content-container {
+        padding: 0px 0px 20px 20px;
+    }
+
+    .text-container {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .heading {
         font-style: normal;
         font-weight: 500;
         font-size: 30px;
@@ -32,13 +40,11 @@ export const Hc3CardContentContainer = styled.div`
         white-space: pre-wrap;
     }
 
-    .sub-heading: {
+    .sub-heading {
         font-style: normal;
-        font-weight: 200;
+        font-weight: 400;
         font-size: 12px;
         line-height: 18px;
-        word-wrap: break-word;
-        white-space: pre-wrap;
     }
 
     .cta {

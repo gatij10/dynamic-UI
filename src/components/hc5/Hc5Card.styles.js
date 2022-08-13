@@ -6,7 +6,7 @@ export const Hc5CardContainer = styled.div`
     height: fit-content;
     flex-direction: row;
     padding: 10px;
-    background-color: ${({ backgroundColor }) => (backgroundColor || 'white')};
+    background-color: ${({ backgroundColor }) => (backgroundColor || '#F7F6F3')};
 
   .background-image {
     object-fit: contain;

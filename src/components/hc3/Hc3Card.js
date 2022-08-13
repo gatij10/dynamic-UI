@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Hc3CardContainer, Hc3CardContentContainer } from './Hc3Card.styles';
+import formatText from '../../utils/formatText';
 
 const Hc3Card = ({ cardData = {} }) => (
     <Hc3CardContainer
@@ -12,12 +13,10 @@ const Hc3Card = ({ cardData = {} }) => (
         >
             <div className="content-container">
                 <div className="text-container">
-                    <h1 className="heading">{cardData.title}</h1>
+                    <h1 className="heading" dangerouslySetInnerHTML={{ __html: formatText(cardData?.formatted_title) }} />
                 </div>
                 <div className="text-container">
-                    <h4 className="sub-heading">
-                        {cardData.description}
-                    </h4>
+                    <p className="sub-heading" dangerouslySetInnerHTML={{ __html: formatText(cardData?.formatted_description) }} />
                 </div>
                 {
                     cardData?.cta && (

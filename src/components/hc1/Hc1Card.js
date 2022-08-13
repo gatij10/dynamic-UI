@@ -4,6 +4,7 @@ import {
     Hc1CardContainer,
 } from './Hc1Card.styles';
 import profilePlaceHolder from '../../assets/images/profile_placeholder.png';
+import formatText from '../../utils/formatText';
 
 const Hc1Card = ({ cardData = {} }) => (
     <Hc1CardContainer
@@ -17,7 +18,7 @@ const Hc1Card = ({ cardData = {} }) => (
                 alt="profile_img"
             />
             <div className="text-container">
-                <p className="title">{cardData?.formatted_title?.text}</p>
+                <p className="title" dangerouslySetInnerHTML={{ __html: formatText(cardData?.formatted_title) }} />
                 <p className="sub-title">{cardData?.name}</p>
             </div>
         </div>

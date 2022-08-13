@@ -5,7 +5,7 @@ import Hc6Card from '../components/hc6/Hc6Card';
 import Hc9Card from '../components/hc9/Hc9Card';
 import { CARD_TYPES } from '../constants';
 
-const renderCard = (cardType, height, cardData = []) => {
+const renderCard = (cardType, height, onClickRemindLater, onClickDismiss, cardData = {}) => {
     switch (cardType) {
         case CARD_TYPES.HC6:
             return <Hc6Card cardData={cardData} />;
@@ -16,7 +16,13 @@ const renderCard = (cardType, height, cardData = []) => {
         case CARD_TYPES.HC5:
             return <Hc5Card cardData={cardData} />;
         case CARD_TYPES.HC3:
-            return <Hc3Card cardData={cardData} />;
+            return (
+                <Hc3Card
+                    cardData={cardData}
+                    onClickRemindLater={onClickRemindLater}
+                    onClickDismiss={onClickDismiss}
+                />
+            );
 
         default:
             return null;

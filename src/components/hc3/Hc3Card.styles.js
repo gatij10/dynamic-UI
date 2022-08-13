@@ -55,3 +55,33 @@ export const Hc3CardContentContainer = styled.div`
         padding: 10px;
       }
 `;
+
+export const SideBarContainer = styled.div`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      flex-direction: column;
+`;
+
+export const SideBarBtnConatiner = styled.div`
+    background-color: #f7f6f3;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 12px;
+
+    .btn-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: #000000;
+    }
+
+    :first-child {
+        margin-bottom: 30px
+    }
+`;

@@ -8,11 +8,15 @@ const CardGroups = ({
     cardType,
     isScrollable,
     height,
+    onClickRemindLater,
+    onClickDismiss,
 }) => (
-    <CardGroupContainer isScrollable={isScrollable}>
+    <CardGroupContainer isScrollable={isScrollable} cardType={cardType}>
         {
             cards.map((cardData) => (
-                renderCard(cardType, height, cardData)
+                <React.Fragment key={`${cardData.name}-${cardData.bg_color}`}>
+                    {renderCard(cardType, height, onClickRemindLater, onClickDismiss, cardData)}
+                </React.Fragment>
             ))
         }
     </CardGroupContainer>
@@ -23,6 +27,8 @@ CardGroups.propTypes = {
     cardType: PropTypes.string.isRequired,
     height: PropTypes.number,
     isScrollable: PropTypes.bool,
+    onClickRemindLater: PropTypes.func.isRequired,
+    onClickDismiss: PropTypes.func.isRequired,
 };
 
 CardGroups.defaultProps = {

@@ -7,6 +7,7 @@ export const Hc1CardContainer = styled.div`
     border-radius: 12px;
     background-color: ${({ backgroundColor }) => (backgroundColor || '#FBAF03')};
 
+
     .content-container {
         display: flex;
         flex-direction: row;
@@ -43,5 +44,9 @@ export const Hc1CardContainer = styled.div`
         margin: 0;
         color: rgba(27, 27, 30, 0.725524);
         padding-bottom: 20px;
+      }
+
+      :last-child {
+        margin-left: 16px;
       }
 `;

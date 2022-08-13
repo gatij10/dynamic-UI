@@ -6,10 +6,11 @@ import {
 import profilePlaceHolder from '../../assets/images/profile_placeholder.png';
 import formatText from '../../utils/formatText';
 
-const Hc1Card = ({ cardData = {} }) => (
+const Hc1Card = ({ cardData = {}, isScrollable = false }) => (
     <Hc1CardContainer
         onClick={() => { window.open(cardData?.url); }}
         backgroundColor={cardData?.bg_color}
+        isScrollable={isScrollable}
     >
         <div className="content-container">
             <img
@@ -27,6 +28,11 @@ const Hc1Card = ({ cardData = {} }) => (
 
 Hc1Card.propTypes = {
     cardData: PropTypes.object.isRequired,
+    isScrollable: PropTypes.bool,
+};
+
+Hc1Card.defaultProps = {
+    isScrollable: false,
 };
 
 export default Hc1Card;

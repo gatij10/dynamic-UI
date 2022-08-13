@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 export const Hc1CardContainer = styled.div`
-    width: 100%;
-    min-width: 100%,
+    display: flex;
+    width: ${({ isScrollable }) => (isScrollable ? '0%' : '100%')};
+    min-width: ${({ isScrollable }) => (isScrollable ? '100%' : '0%')};
     max-height: 50px;
+    overflow-y: hidden;
+    overflow-x: auto;
     border-radius: 12px;
+    padding: 10px 0px 10px 0px;
     background-color: ${({ backgroundColor }) => (backgroundColor || '#FBAF03')};
-
 
     .content-container {
         display: flex;

@@ -35,11 +35,17 @@ const Hc3Card = ({ cardData = {}, onClickRemindLater, onClickDismiss }) => {
             {
                 longPress ? (
                     <SideBarContainer>
-                        <SideBarBtnConatiner onClick={() => onClickRemindLater(cardData.name)}>
+                        <SideBarBtnConatiner
+                            onClick={() => onClickRemindLater(cardData.name)}
+                            onTouchStart={() => onClickRemindLater(cardData.name)}
+                        >
                             <img src={remindLater} alt="remind later" />
                             <p className="btn-text">remind later</p>
                         </SideBarBtnConatiner>
-                        <SideBarBtnConatiner onClick={() => onClickDismiss(cardData.name)}>
+                        <SideBarBtnConatiner
+                            onClick={() => onClickDismiss(cardData.name)}
+                            onTouchStart={() => onClickRemindLater(cardData.name)}
+                        >
                             <img src={dismiss} alt="remind later" />
                             <p className="btn-text">dismiss now</p>
                         </SideBarBtnConatiner>

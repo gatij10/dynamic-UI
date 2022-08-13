@@ -11,11 +11,18 @@ const CardGroups = ({
     onClickRemindLater,
     onClickDismiss,
 }) => (
-    <CardGroupContainer isScrollable={isScrollable} cardType={cardType}>
+    <CardGroupContainer isScrollable={isScrollable}>
         {
             cards.map((cardData) => (
                 <React.Fragment key={`${cardData.name}-${cardData.bg_color}`}>
-                    {renderCard(cardType, height, onClickRemindLater, onClickDismiss, cardData)}
+                    {renderCard(
+                        cardType,
+                        height,
+                        onClickRemindLater,
+                        onClickDismiss,
+                        isScrollable,
+                        cardData,
+                    )}
                 </React.Fragment>
             ))
         }

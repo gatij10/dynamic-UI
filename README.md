@@ -4,3 +4,4 @@
 This repository contains my frontend assignment for fampay.
 
 ## Preview
+https://fampay-frontend-assignment-gatij.netlify.app

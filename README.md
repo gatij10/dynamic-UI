@@ -1,4 +1,4 @@
-# Fampay Frontend Assignment
+# Dynamic UI
 
 ## Description
 This repository contains my frontend assignment for fampay.

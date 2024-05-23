@@ -3,9 +3,6 @@
 ## Description
 This repository contains my frontend assignment for fampay.
 
-## Preview
-https://fampay-frontend-assignment-gatij.netlify.app
-
 ## Get Started
 - Clone the repo.
 - `npm install` - To install all packages
